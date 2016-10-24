@@ -1,0 +1,26 @@
+<div class="main">
+	<h1>Фильтры</h1>
+	<h2>lowercase, uppercase </h2> 
+	<h3>{ { lowercase_expression | lowercase} }</h3>
+	<h3>{ { uppercase_expression | uppercase} }</h3>
+
+
+	<p>
+		msg="{{msg}}"
+	</p>
+	
+	{ {msg | lowercase} }
+	<pre>
+		{{msg | lowercase}}
+	</pre>
+
+	{ {msg | uppercase} } 
+	<pre>
+		{{msg | uppercase}}
+	</pre>
+
+	<a href="https://docs.angularjs.org/api/ng/filter/lowercase">ссылка на документацию</a>
+	<a href="https://docs.angularjs.org/api/ng/filter/uppercase">ссылка на документацию</a>
+
+	<paginator current="page"></paginator>	
+</div>

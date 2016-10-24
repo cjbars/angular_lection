@@ -1,0 +1,21 @@
+<DOCTYPE html>
+<html ng-app="lection">
+	<head>
+		<title>Живая лекция</title>
+		<meta charset="utf-8">
+		<script src="js/lib/angular.js"></script>
+		<script src="js/lib/angular-route.js"></script>
+		<script src="js/lib/angular-resource.js"></script>
+		<script src="js/app.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	</head>
+	<body>
+
+		<ng-view></ng-view>
+
+		<div class="footer" ng-controller="footerController">
+			<div ng-if="footerMessage">Аллоэ!!!</div>
+		</div>
+	</body>
+</html>

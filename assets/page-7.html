@@ -1,0 +1,33 @@
+<div class="main">
+	<h1>Фильтры</h1>
+	<h2>orderBy</h2> 
+	<h3>{ { orderBy_expression | orderBy : expression : reverse : comparator} }</h3>
+
+	<p>дано = {{list}}</p>
+
+	<table class="table" ng-init="order='id'">
+		<tr>
+			<td class="table__header" 
+				ng-class="{'table__header-active':order=='id'}" 
+				ng-click="order='id';reverse=!reverse">id <span ng-show="reverse && order=='id'">&uarr;</span><span ng-show="!reverse  && order=='id'">&darr;</span></td>
+			
+			<td class="table__header" 
+				ng-class="{'table__header-active':order=='name'}" 
+				ng-click="order='name';reverse=!reverse">
+				name 
+				<span ng-show="reverse && order=='name'">&uarr;</span>
+				<span ng-show="!reverse && order=='name'">&darr;</span></td>
+			
+			<td class="table__header" ng-class="{'table__header-active':order=='age'}" ng-click="order='age';reverse=!reverse">age <span ng-show="reverse && order=='age'">&uarr;</span><span ng-show="!reverse && order=='age'">&darr;</span></td>
+		</tr>
+		<tr ng-repeat="item in list | orderBy:order:reverse">
+			<td>{{item.id}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.age}}</td>
+		</tr>
+	</table>
+	
+	<a href="https://docs.angularjs.org/api/ng/filter/orderBy">ссылка на документацию</a>
+
+	<paginator current="page"></paginator>	
+</div>

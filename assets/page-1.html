@@ -1,0 +1,30 @@
+<div class="main">
+	<h1>фильтры</h1>
+
+	<h2>фильтр даты</h2> 
+	<h3>{ { date_expression | date : format : timezone } }</h3>
+
+	<p>исходная дата = {{date}}</p>
+	<p>
+		пример { {  date | date:'short' } }
+		{{date|date:'short'}}
+	</p>
+	<p>
+		пример { {  date | date:'fullDate' } }
+		{{date|date:'fullDate'}}
+	</p>
+	<p>
+		пример { {  date | date:'medium' } }
+		{{date|date:'medium'}}
+	</p>
+	<p>
+		пример { {  date | date:'yyyy-MM-dd HH:mm:ss Z' } }
+		{{date|date:'yyyy-MM-dd HH:mm:ss Z'}}
+	</p>
+
+	<a href="https://docs.angularjs.org/api/ng/filter/date">ссылка на документацию</a>
+
+	<paginator current="page"></paginator>	
+</div>
+
+

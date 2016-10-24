@@ -1,0 +1,21 @@
+<div class="main">
+	<h1>Фильтры</h1>
+	<h2>фильтр валют</h2> 
+	<h3>{ { currency_expression | currency : symbol : fractionSize} }</h3>
+
+	<p>дано = {{money}}</p>
+	<p>
+		{{money | currency:" USD$ "}}
+	</p>
+	<p>
+		{{money | currency:" руб "}}	
+	</p>
+	<p>
+		{{money | currency:" руб ":4}}	
+	</p>
+	
+
+	<a href="https://docs.angularjs.org/api/ng/filter/currency">ссылка на документацию</a>
+
+	<paginator current="page"></paginator>		
+</div>

@@ -1,0 +1,26 @@
+<div class="main">
+	<h1>Фильтры</h1>
+	<h2>limitTo</h2> 
+	<h3>{ { limitTo_expression | limitTo : limit : begin} }</h3>
+
+	<p>дано = {{msg}}</p>
+
+	{ {msg | limitTo:7} }
+	<pre>
+		{{msg | limitTo:7}}
+	</pre>
+	
+	{ {msg | limitTo:14:8} }
+	<pre>
+		{{msg | limitTo:14:8}}
+	</pre>
+
+	[1, 2, 3, 4, 5, 6, 7 ,8, 9]
+	<pre>
+		{{[1, 2, 3, 4, 5, 6, 7 ,8, 9]|limitTo:3:4}}
+	</pre>
+
+	<a href="https://docs.angularjs.org/api/ng/filter/limitTo">ссылка на документацию</a>
+
+	<paginator current="page"></paginator>	
+</div>
